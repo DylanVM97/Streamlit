@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
-import os
-from datetime import datetime
 import plotly.graph_objects as go
-import plotly.io as pio
 from plotly.subplots import make_subplots
 from itertools import islice
 
