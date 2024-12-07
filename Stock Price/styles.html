@@ -1,0 +1,117 @@
+<style>
+    .title{
+        color: #174C4F;
+        font-size: 3em;
+    }
+
+    h3[id="period-metrics"]{
+        font-weight: 700;
+        color: #174C4F;
+    }
+
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .low_indicator) {
+        & div[data-testid="stMetric"] {
+            border-left: 0.5rem solid red;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .high_indicator) {
+        & div[data-testid="stMetric"] {
+            border-left: 0.5rem solid green;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .bottom_indicator) {
+        & div[data-testid="stMetric"] {
+            border-left: 0.5rem solid cyan;
+        }
+    }
+
+    .stMetric .metric-value {
+            word-wrap: break-word;
+            word-break: break-word;
+            max-width: 100% !important;
+            overflow-wrap: break-word;
+            font-size: 16px;  /* Ajusta el tamaño de la fuente para mayor flexibilidad */
+        }
+
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .watchlist_symbol_name) {
+        & p {
+            color: #174C4F;
+            font-family: "Arial";
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .watchlist_price_label) {
+        & p {
+            font-size: 0.8em;
+            margin-bottom: 0;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .watchlist_price_value) {
+        & p {
+            color: #174C4F;
+            font-family: "Arial";
+            font-size: 1.2em;
+            margin-bottom: 0;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .watchlist_ticker) {
+        text-align: right;
+        & p {
+            font-size: 0.8em;
+            margin-bottom: 0;
+        }
+    }
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .watchlist_change) {
+        text-align: right;
+        & p {
+            font-size: 0.8em;
+        }
+    }
+    div[data-testid="stPlotlyChart"] .user-select-none .svg-container {
+        width: 100% !important;  /* Hace que ocupe todo el ancho disponible */
+        height: auto !important; /* Ajusta la altura automáticamente si es necesario */
+    }
+
+
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .column_plotly) {
+        & .stPlotlyChart {
+            margin-top: 1em;
+            margin-right: -1em;
+            padding: 1em;
+            border-radius: 16px;
+            box-shadow: 0 0px 10px 0 rgba(58, 59, 69, 0.15);
+        }
+    }
+
+    div[data-testid="stVerticalBlock"]:has(> div > .stHtml > .column_indicator) {
+        margin-top: 2.5em;
+        padding-left: 4em;
+    }
+
+
+    div[data-testid="stMetric"]{
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        padding: 1em 2em;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    }
+
+    div[data-testid="stMetricLabel"] p {
+        font-size: 1em;
+    }
+
+    div[data-testid="stMetricValue"]{
+        font-size:  1.3em;
+        font-weight: 700;
+        color: #174C4F
+    }
+
+    div[data-testid="stExpander"]> details {
+        background-color: #ffffff;
+        border: #ffffff;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    }
+
+</style>
