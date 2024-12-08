@@ -5,10 +5,8 @@ from plotly.subplots import make_subplots
 from itertools import islice
 
 st.set_page_config(layout='wide')
+st.html('stock_price/styles.html')
 
-# Lee el archivo HTML y lo carga
-with open('stock_price/styles.html', 'r') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 @st.cache_data
 def get_data():
