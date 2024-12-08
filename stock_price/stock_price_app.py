@@ -5,18 +5,15 @@ from plotly.subplots import make_subplots
 from itertools import islice
 
 st.set_page_config(layout='wide')
-
-# Lee el archivo HTML y lo carga
-with open('styles.html', 'r') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+st.html('stock_price/styles.html')
 
 @st.cache_data
 def get_data():
-    ticker_df = pd.read_excel('data/Financial Data.xlsx', sheet_name='ticker')
+    ticker_df = pd.read_excel('stock_price/data/Financial Data.xlsx', sheet_name='ticker')
 
     history_df = {}
     for ticker in list(ticker_df['Ticker']):
-        d = pd.read_excel('data/Financial Data.xlsx', sheet_name=ticker)
+        d = pd.read_excel('stock_price/data/Financial Data.xlsx', sheet_name=ticker)
         history_df[ticker] = d
     
     return ticker_df, history_df
